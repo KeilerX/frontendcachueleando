@@ -1,0 +1,35 @@
+<h3>Registro de Área</h3>
+<div [hidden]="submitted" style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nombre"
+        required
+        [(ngModel)]="area.nombre"
+        name="nombre"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="descripcion">Descripción</label>
+      <input
+        type="text"
+        class="form-control"
+        id="descripcion"
+        required
+        [(ngModel)]="area.descripcion"
+        name="descripcion"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-success">Registrar</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>¡Cliente registrado correctamente!</h4>
+  <button class="btn btn-success" (click)="newArea()">Nuevo</button>
+</div>

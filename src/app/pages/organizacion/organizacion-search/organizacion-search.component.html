@@ -1,0 +1,29 @@
+<h3>Buscar Organización por Nombre</h3>
+<div style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nombre"
+        required
+        [(ngModel)]="nombre"
+        name="nombre"
+      />
+    </div>
+
+    <div class="btn-group">
+      <button type="submit" class="btn btn-success">Buscar</button>
+    </div>
+  </form>
+</div>
+<ul>
+  <li *ngFor="let organizacion of organizaciones">
+    <h4>
+      {{ organizacion.id }} - {{ organizacion.nombre
+      }}{{ organizacion.direccion }}{{ organizacion.telefono }}
+      {{ organizacion.descripcion }}
+    </h4>
+  </li>
+</ul>

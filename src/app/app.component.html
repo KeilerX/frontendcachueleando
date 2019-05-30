@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -19,3 +19,199 @@
 </ul>
 
 <router-outlet></router-outlet>
+ -->
+
+<div class="example-container">
+  <mat-toolbar color="primary" class="example-toolbar">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+      <mat-icon *ngIf="sidenav.opened">close</mat-icon>
+    </button>
+
+    <h1 class="example-app-name">Cachueleando</h1>
+
+    <span class="example-spacer"></span>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/perfil">
+        <mat-icon>account_box</mat-icon>
+        <span>Mi Perfil</span>
+      </button>
+      <button
+        mat-menu-item
+        routerLink="/login"
+        (click)="sidenav.opened = false"
+      >
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Cerrar Sesión</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container">
+    <mat-sidenav #sidenav mode="side" style="width: 200px">
+      <button
+        mat-menu-item
+        (click)="sidenav.toggle()"
+        routerLink="/listar-trabajo"
+        style="cursor: pointer"
+      >
+        <mat-icon>view_list</mat-icon>
+        <span>Listar Trabajos</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button
+        mat-menu-item
+        (click)="sidenav.toggle()"
+        routerLink="/buscar-trabajo-byarea"
+        style="cursor: pointer"
+      >
+        <mat-icon>search</mat-icon>
+        <span>Buscar Trabajo</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button
+        mat-menu-item
+        (click)="sidenav.toggle()"
+        routerLink="/crear-trabajo"
+        style="cursor: pointer"
+      >
+        <mat-icon>work</mat-icon>
+        <span>Crear Trabajo</span>
+      </button>
+      <mat-divider></mat-divider>
+
+      <button
+        mat-menu-item
+        (click)="sidenav.toggle()"
+        routerLink="/listar-area"
+        style="cursor: pointer"
+      >
+        <mat-icon>view_list</mat-icon>
+        <span>Listar Áreas</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button
+        mat-menu-item
+        (click)="sidenav.toggle()"
+        routerLink="/buscar-area-bynombre"
+        style="cursor: pointer"
+      >
+        <mat-icon>search</mat-icon>
+        <span>Buscar Área</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button
+        mat-menu-item
+        (click)="sidenav.toggle()"
+        routerLink="/crear-area"
+        style="cursor: pointer"
+      >
+        <mat-icon>add_box</mat-icon>
+        <span>Crear Área</span>
+      </button>
+      <mat-divider></mat-divider>
+
+      <button
+        mat-menu-item
+        (click)="sidenav.toggle()"
+        routerLink="/listar-usuario"
+        style="cursor: pointer"
+      >
+        <mat-icon>view_list</mat-icon>
+        <span>Listar Usuarios</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button
+        mat-menu-item
+        (click)="sidenav.toggle()"
+        routerLink="/buscar-usuario-bynombres"
+        style="cursor: pointer"
+      >
+        <mat-icon>search</mat-icon>
+        <span>Buscar Usuarios</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button
+        mat-menu-item
+        (click)="sidenav.toggle()"
+        routerLink="/crear-usuario"
+        style="cursor: pointer"
+      >
+        <mat-icon>accessibility</mat-icon>
+        <span>Crear Usuario</span>
+      </button>
+      <mat-divider></mat-divider>
+
+      <button
+        mat-menu-item
+        (click)="sidenav.toggle()"
+        routerLink="/listar-organizacion"
+        style="cursor: pointer"
+      >
+        <mat-icon>view_list</mat-icon>
+        <span>Listar Organizaciones</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button
+        mat-menu-item
+        (click)="sidenav.toggle()"
+        routerLink="/buscar-organizacion-bynombre"
+        style="cursor: pointer"
+      >
+        <mat-icon>search</mat-icon>
+        <span>Buscar Organización</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button
+        mat-menu-item
+        (click)="sidenav.toggle()"
+        routerLink="/crear-organizacion"
+        style="cursor: pointer"
+      >
+        <mat-icon>build</mat-icon>
+        <span>Crear Organización</span>
+      </button>
+      <mat-divider></mat-divider>
+
+      <button
+        mat-menu-item
+        (click)="sidenav.toggle()"
+        routerLink="/listar-recomendacion"
+        style="cursor: pointer"
+      >
+        <mat-icon>view_list</mat-icon>
+        <span>Listar Recomendaciones</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button
+        mat-menu-item
+        (click)="sidenav.toggle()"
+        routerLink="/buscar-recomendacion-byid"
+        style="cursor: pointer"
+      >
+        <mat-icon>search</mat-icon>
+        <span>Buscar Recomendación</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button
+        mat-menu-item
+        (click)="sidenav.toggle()"
+        routerLink="/crear-recomendacion"
+        style="cursor: pointer"
+      >
+        <mat-icon>star</mat-icon>
+        <span>Crear Recomendacion</span>
+      </button>
+      <mat-divider></mat-divider>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

@@ -1,0 +1,14 @@
+<div *ngIf="area">
+  <div><label>Nombre: </label> {{ area.nombre }}</div>
+  <div><label>Descripción: </label> {{ area.descripcion }}</div>
+
+  <!-- <span class="button is-small btn-primary" *ngIf='customer.active' (click)='updateActive(false)'>Inactivo</span> -->
+
+  <!-- <span class="button is-small btn-primary" *ngIf='!customer.active' (click)='updateActive(true)'>Activo</span> -->
+
+  <span class="button is-small btn-danger" (click)="deleteArea()"
+    >Eliminar</span
+  >
+
+  <hr />
+</div>

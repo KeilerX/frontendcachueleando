@@ -1,0 +1,25 @@
+<h3>Buscar Área por Nombre</h3>
+<div style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nombre"
+        required
+        [(ngModel)]="nombre"
+        name="nombre"
+      />
+    </div>
+
+    <div class="btn-group">
+      <button type="submit" class="btn btn-success">Buscar</button>
+    </div>
+  </form>
+</div>
+<ul>
+  <li *ngFor="let area of areas">
+    <h4>{{ area.id }} - {{ area.nombre }} {{ area.descripcion }}</h4>
+  </li>
+</ul>

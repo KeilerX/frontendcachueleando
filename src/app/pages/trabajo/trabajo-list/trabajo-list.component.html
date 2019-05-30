@@ -1,0 +1,8 @@
+<h3>Lista de Trabajos</h3>
+<div *ngFor="let trabajo of trabajos | async" style="width: 300px;">
+  <app-trabajo-details [trabajo]="trabajo"></app-trabajo-details>
+</div>
+
+<div>
+  <button type="button" class="button btn-danger">Eliminar Todos</button>
+</div>

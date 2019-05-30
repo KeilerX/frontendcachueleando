@@ -1,0 +1,8 @@
+<h3>Lista de Áreas</h3>
+<div *ngFor="let area of areas | async" style="width: 300px;">
+  <app-area-details [area]="area"></app-area-details>
+</div>
+
+<div>
+  <button type="button" class="button btn-danger">Eliminar Todos</button>
+</div>

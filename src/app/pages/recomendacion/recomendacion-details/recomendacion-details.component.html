@@ -1,0 +1,14 @@
+<div *ngIf="recomendacion">
+  <div><label>Descripción: </label> {{ recomendacion.descripcion }}</div>
+  <div><label>Estado: </label> {{ recomendacion.estado }}</div>
+
+  <!-- <span class="button is-small btn-primary" *ngIf='customer.active' (click)='updateActive(false)'>Inactivo</span> -->
+
+  <!-- <span class="button is-small btn-primary" *ngIf='!customer.active' (click)='updateActive(true)'>Activo</span> -->
+
+  <span class="button is-small btn-danger" (click)="deleteRecomendacion()"
+    >Eliminar</span
+  >
+
+  <hr />
+</div>

@@ -1,0 +1,35 @@
+<h3>Registro de Recomendación</h3>
+<div [hidden]="submitted" style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="descripcion">Descripción</label>
+      <input
+        type="text"
+        class="form-control"
+        id="descripcion"
+        required
+        [(ngModel)]="recomendacion.descripcion"
+        name="descripcion"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="estado">Estado</label>
+      <input
+        type="checkbox"
+        class="form-control"
+        id="estado"
+        required
+        [(ngModel)]="recomendacion.estado"
+        name="estado"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-success">Registrar</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>¡Cliente registrado correctamente!</h4>
+  <button class="btn btn-success" (click)="newRecomendacion()">Nuevo</button>
+</div>

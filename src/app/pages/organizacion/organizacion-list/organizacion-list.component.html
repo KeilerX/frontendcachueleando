@@ -1,0 +1,10 @@
+<h3>Lista de Organizaciones</h3>
+<div *ngFor="let organizacion of organizaciones | async" style="width: 300px;">
+  <app-organizacion-details
+    [organizacion]="organizacion"
+  ></app-organizacion-details>
+</div>
+
+<div>
+  <button type="button" class="button btn-danger">Eliminar Todos</button>
+</div>

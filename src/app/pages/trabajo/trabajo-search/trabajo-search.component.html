@@ -1,0 +1,28 @@
+<h3>Buscar Trabajo por Sueldo</h3>
+<div style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nombre">Pago</label>
+      <input
+        type="number"
+        class="form-control"
+        id="sueldo"
+        required
+        [(ngModel)]="sueldo"
+        name="sueldo"
+      />
+    </div>
+
+    <div class="btn-group">
+      <button type="submit" class="btn btn-success">Buscar</button>
+    </div>
+  </form>
+</div>
+<ul>
+  <li *ngFor="let area of areas">
+    <h4>
+      {{ trabajo.id }} - {{ trabajo.descripcion }} {{ trabajo.sueldo }}
+      {{ trabajo.estado }}
+    </h4>
+  </li>
+</ul>

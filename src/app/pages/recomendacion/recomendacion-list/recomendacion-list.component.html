@@ -1,0 +1,13 @@
+<h3>Lista de Recomendaciones</h3>
+<div
+  *ngFor="let recomendacion of recomendaciones | async"
+  style="width: 300px;"
+>
+  <app-recomendacion-details
+    [recomendacion]="recomendacion"
+  ></app-recomendacion-details>
+</div>
+
+<div>
+  <button type="button" class="button btn-danger">Eliminar Todos</button>
+</div>
